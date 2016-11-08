@@ -15,7 +15,7 @@ export default class About extends Component {
   }
 
   componentWillMount() {
-    fetch('http://httpbin.org/delay/1')
+    fetch('http://httpbin.org/delay/0')
       .then((response) => {
         console.log('response', response.url);
         this.setState({ url: response.url });
