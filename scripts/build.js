@@ -69,4 +69,7 @@ webpack(config).run(function(err, stats) {
     console.log();
   }
   console.log();
+
+  // Copy _redirects for netlify
+  fs.createReadStream(paths.appSrc + '/../_redirects').pipe(fs.createWriteStream(paths.appBuild + '/_redirects'));
 });
