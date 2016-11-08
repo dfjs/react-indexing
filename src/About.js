@@ -26,10 +26,14 @@ export default class About extends Component {
     const { className, ...props } = this.props;
     return (
       <div {...props}>
-        <h1>
-          About
-        </h1>
-        <p>{this.state.url === '' ? 'loading..' : this.state.url}</p>
+        { this.state.url === '' ? 'loading..' : (
+          <div>
+            <h1>
+              About
+            </h1>
+            <p>{this.state.url}</p>
+          </div>
+          )}
       </div>
     );
   }
