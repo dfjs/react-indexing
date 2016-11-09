@@ -16,9 +16,10 @@ function getData(nextState, replaceState, next) {
 
 const Routes = (props) => (
   <Router {...props}>
-    <Route path="/" component={App} />
-    <Route path="/about" component={About} onEnter={getData} />
-    <Route path="*" component={NotFound} />
+    <Route path="/" component={App}>
+      <Route path="about" component={About} onEnter={getData} />
+      <Route path="*" component={NotFound} />
+    </Route>
   </Router>
 );
 

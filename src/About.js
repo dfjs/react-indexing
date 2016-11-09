@@ -21,9 +21,9 @@ export default class About extends Component {
   render() {
     const { className, ...props } = this.props;
     return (
-      <div {...props}>
+      <div>
         <h1>
-          About
+          About!
         </h1>
         <p>{this.state.url === '' ? 'loading..' : this.state.url}</p>
       </div>
