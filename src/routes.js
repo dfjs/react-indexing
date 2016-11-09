@@ -7,7 +7,7 @@ import About from './About';
 import NotFound from './NotFound';
 
 function getData(nextState, replaceState, next) {
-  fetch('http://httpbin.org/delay/0')
+  fetch('http://httpbin.org/delay/3')
     .then((response) => {
       console.log('response', response.url);
       next()
