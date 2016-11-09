@@ -10,16 +10,12 @@ export default class About extends Component {
     super();
 
     this.state = {
-      url: ''
+      url: 'static state content'
     }
   }
 
   componentDidMount() {
-    fetch('http://httpbin.org/delay/0')
-      .then((response) => {
-        console.log('response', response.url);
-        this.setState({ url: response.url });
-      })
+    console.log('in comp did mount')
   }
 
   render() {
